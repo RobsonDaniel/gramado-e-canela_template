@@ -1,0 +1,155 @@
+$menu-color: #7B241C;
+$conteudo-color: #FADBD8;
+
+.menu {
+  background-color: $menu-color;
+  position: relative;
+  text-align: center;
+  margin-bottom: #{($spacer * 3)};
+
+  a {
+    color: $white;
+    padding: #{(10/16)}rem;
+    display: block;
+    font-size: #{(17/16)}rem;
+    text-decoration: none;
+
+    &:hover { color: $yellow; text-decoration: none; }
+
+  }
+
+  .btn-menu {
+    float: right;
+    position: absolute;
+    display: block;
+    right: 0;
+    top: 0;
+
+    .bar1, .bar2, .bar3 {
+        width: #{(35/16)}rem;
+        height: #{(5/16)}rem;
+        background-color: $white;
+        margin: #{(6/16)}rem 0;
+        transition: 0.4s;
+    }
+  }
+
+  .menu-conteudo { display: none; }
+
+}
+
+.animarBtnMenu {
+  .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+
+  .bar2 { opacity: 0; }
+
+  .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+  }
+
+}
+
+.grid-2 { column-width: #{(400/16)}rem; }
+
+.grid-2, .grid-3 {
+  column-gap: #{(55/16)}rem;
+
+  .dica-cvc { width: 100%; }
+}
+
+.grid-3 { column-width: #{(240/16)}rem; }
+
+.container { text-align: justify; }
+
+.fa-star { color: #27AE60; }
+
+main {
+
+  .titulo {
+    background-color: $menu-color;
+    color: $white;
+    padding: #{($spacer)};
+  }
+
+  .conteudo {
+    background-color: $conteudo-color;
+
+    ol { li { strong { font-style: italic; } } }
+
+    .dica-cvc { .conteudo-info { background-color: $white; } }
+
+  }
+
+  .conteudo, .conteudo-cvc {
+    padding-bottom: #{($spacer * 3)};
+
+    .container { padding-top: #{($spacer * 3)}; }
+
+    h5 { color: $menu-color; font-weight: bold; }
+
+    .dica-cvc {
+      margin-bottom: #{($spacer * 3)};
+
+      .info {
+        text-align: center;
+        padding: #{($spacer * .5)} 0;
+        @extend .titulo;
+      }
+
+      .conteudo-info { padding: #{($spacer * .5)} #{($spacer)}; }
+
+    }
+
+  }
+
+  .conteudo-cvc {
+    background-color: $white;
+
+    .dica-cvc {
+
+      .mark {
+        background-color: $yellow;
+        padding: #{($spacer * .5)};
+      }
+
+      .conteudo-info { background-color: $conteudo-color; }
+
+      th, td { text-align: center; }
+
+    }
+
+  }
+
+  .legenda {
+    position: relative;
+
+    p {
+      position: absolute;
+      bottom: #{(8/16)}rem;
+      left: #{(16/16)}rem;
+      background-color: $white;
+      padding: #{(3/16)}rem #{(10/16)}rem;
+    }
+  }
+
+  iframe { width: 100%; }
+}
+
+
+#btn-topo {
+  z-index: 99999;
+  background-color: $menu-color;
+  color: $white;
+  border: #{(1/16)}rem solid $white;
+  position: fixed;
+  right: #{(20/16)}rem;
+  bottom: #{(15/16)}rem;
+  outline-color: $yellow;
+  display: none;
+}
+
+footer { background-color: $menu-color; color: $white; }
