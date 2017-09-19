@@ -62,7 +62,11 @@
 
 .container { text-align: justify; }
 
-.fa-star { color: #27AE60; }
+.fa-star, .fa-check-circle { color: #27AE60; }
+
+.fa-smile-o { color: $yellow; }
+
+.fa-plus { color: $menu-color; }
 
 main {
 
