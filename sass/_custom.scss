@@ -31,7 +31,7 @@
     }
   }
 
-  .menu-conteudo { display: none; }
+  .menu-conteudo { max-height: 0; overflow: hidden; transition: 0.4s; }
 
 }
 
@@ -70,11 +70,7 @@
 
 main {
 
-  .titulo {
-    background-color: $menu-color;
-    color: $white;
-    padding: #{($spacer)};
-  }
+  .titulo { background-color: $menu-color; color: $white; padding: #{($spacer)}; }
 
   .conteudo {
     background-color: $conteudo-color;
@@ -95,11 +91,7 @@ main {
     .dica-cvc {
       margin-bottom: #{($spacer * 3)};
 
-      .info {
-        text-align: center;
-        padding: #{($spacer * .5)} 0;
-        @extend .titulo;
-      }
+      .info { text-align: center; padding: #{($spacer * .5)} 0; @extend .titulo; }
 
       .conteudo-info { padding: #{($spacer * .5)} #{($spacer)}; }
 
@@ -112,10 +104,7 @@ main {
 
     .dica-cvc {
 
-      .mark {
-        background-color: $yellow;
-        padding: #{($spacer * .5)};
-      }
+      .mark { background-color: $yellow; padding: #{($spacer * .5)}; }
 
       .conteudo-info { background-color: $conteudo-color; }
 
